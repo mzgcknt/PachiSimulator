@@ -18,26 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-c8-oAz">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-c8-oAz" customClass="probabilityPickerView" customModule="PachiSimulator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="104" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibK-4c-cCq">
-                                <rect key="frame" x="16" y="75" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibK-4c-cCq">
+                                <rect key="frame" x="16" y="75" width="84" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLm-Zt-T7x">
-                                <rect key="frame" x="16" y="328" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLm-Zt-T7x">
+                                <rect key="frame" x="16" y="328" width="84" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42Y-y5-0eA">
-                                <rect key="frame" x="0.0" y="357" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="355" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
@@ -46,12 +46,14 @@
                     </view>
                     <connections>
                         <outlet property="probabilityLabel" destination="ibK-4c-cCq" id="zhn-W7-clv"/>
+                        <outlet property="probabilityPicker" destination="qBH-c8-oAz" id="92c-14-5xf"/>
                         <outlet property="rotationRateLabel" destination="TLm-Zt-T7x" id="3a6-si-BeC"/>
+                        <outlet property="rotationRatePicker" destination="42Y-y5-0eA" id="pHk-Zv-7pa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eB-Aj-8DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-1405"/>
+            <point key="canvasLocation" x="964" y="-1405.5472263868066"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -75,12 +77,12 @@
                     <navigationItem key="navigationItem" id="7ls-pR-RDr">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="b9c-Q9-jIM">
                             <connections>
-                                <segue destination="qd6-jG-deN" kind="show" id="xSS-Ag-omo"/>
+                                <segue destination="qd6-jG-deN" kind="show" identifier="toSettingView" id="xSS-Ag-omo"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="xUc-vi-E4V">
                             <connections>
-                                <segue destination="Fnj-HZ-V5a" kind="show" id="6NA-K4-KgU"/>
+                                <segue destination="Fnj-HZ-V5a" kind="show" identifier="toHistoryView" id="6NA-K4-KgU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

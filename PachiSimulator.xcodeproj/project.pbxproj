@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8558C9E0230C3EFF0012CF63 /* PachiSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */; };
+		8558C9E4230D86A70012CF63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9E3230D86A70012CF63 /* Constants.swift */; };
 		859FE3A2230840290059EBFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3A1230840290059EBFF /* AppDelegate.swift */; };
 		859FE3A4230840290059EBFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3A3230840290059EBFF /* ViewController.swift */; };
 		859FE3A7230840290059EBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859FE3A5230840290059EBFF /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSetting.swift; sourceTree = "<group>"; };
+		8558C9E3230D86A70012CF63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		859FE39E230840290059EBFF /* PachiSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PachiSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FE3A1230840290059EBFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859FE3A3230840290059EBFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				859FE3A3230840290059EBFF /* ViewController.swift */,
 				859FE3B523084A730059EBFF /* historyViewController.swift */,
 				859FE3B72309163C0059EBFF /* settingViewController.swift */,
+				8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */,
+				8558C9E3230D86A70012CF63 /* Constants.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -152,7 +158,9 @@
 				859FE3A4230840290059EBFF /* ViewController.swift in Sources */,
 				859FE3A2230840290059EBFF /* AppDelegate.swift in Sources */,
 				859FE3B623084A730059EBFF /* historyViewController.swift in Sources */,
+				8558C9E0230C3EFF0012CF63 /* PachiSetting.swift in Sources */,
 				859FE3B82309163C0059EBFF /* settingViewController.swift in Sources */,
+				8558C9E4230D86A70012CF63 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78NFKJP45T;
 				INFOPLIST_FILE = PachiSimulator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78NFKJP45T;
 				INFOPLIST_FILE = PachiSimulator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
