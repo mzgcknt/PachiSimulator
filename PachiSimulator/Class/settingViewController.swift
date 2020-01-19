@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 確率と回転率の設定画面
 class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
   @IBOutlet weak var probabilityLabel: UILabel!
@@ -15,8 +16,7 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
   
   @IBOutlet weak var probabilityPicker: UIPickerView!
   @IBOutlet weak var rotationRatePicker: UIPickerView!
-  // 確率 (表記用, 計算用)
-  let probability:[(spec: String, denominator: Int)] = [("1/319", 319), ("1/256", 256), ("1/199", 199)]
+  
   var rotationRate :[Int] = []
   
   var pachi:  PachiSetting!
@@ -36,7 +36,7 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     if pickerView.tag == 1 {
-      return probability.count
+      return Constants.shared.probability.count
     } else {
       return rotationRate.count
     }
@@ -46,17 +46,17 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     // TODO: pickerが選ばれた際に、確率と回転率をsetするような処理をする事
     // ここはドラムロールだから、画面を遷移する時に値をセットする感じにしよ。
     if pickerView.tag == 1 {
-      pachi.setProbability(probability: probability[row].denominator)
+      self.pachi.setProbability(probability: Constants.shared.probability[row].denominator)
     } else {
-      pachi.setRotation(rotation: rotationRate[row])
+      self.pachi.setRotation(rotation: rotationRate[row])
     }
   }
   
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     if pickerView.tag == 1 {
-      return probability[row].spec
+      return Constants.shared.probability[row].spec
     } else {
-      return rotationRate.map{ String($0) }[row]
+      return rotationRate.map { String($0) }[row]
     }
   }
   func setPickerView(pickerView: UIPickerView, tag: Int) {
@@ -73,13 +73,4 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
       self.rotationRate.append(index)
     }
   }
-  
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-
 }

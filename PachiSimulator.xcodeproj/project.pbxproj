@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7D2D22BDBF6AF88AFBA537 /* Pods_PachiSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8A60BB3EB945834FCAE173 /* Pods_PachiSimulator.framework */; };
 		8558C9E0230C3EFF0012CF63 /* PachiSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */; };
 		8558C9E4230D86A70012CF63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9E3230D86A70012CF63 /* Constants.swift */; };
+		858DDE2D232E7DE000EDB73B /* PachiSettingForLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE2C232E7DE000EDB73B /* PachiSettingForLabel.swift */; };
 		859FE3A2230840290059EBFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3A1230840290059EBFF /* AppDelegate.swift */; };
 		859FE3A4230840290059EBFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3A3230840290059EBFF /* ViewController.swift */; };
 		859FE3A7230840290059EBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859FE3A5230840290059EBFF /* Main.storyboard */; };
@@ -16,11 +18,16 @@
 		859FE3AC2308402B0059EBFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859FE3AA2308402B0059EBFF /* LaunchScreen.storyboard */; };
 		859FE3B623084A730059EBFF /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3B523084A730059EBFF /* historyViewController.swift */; };
 		859FE3B82309163C0059EBFF /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3B72309163C0059EBFF /* settingViewController.swift */; };
+		85B8967A232F4B8D0091EA0D /* RotaryBeaconLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B89679232F4B8D0091EA0D /* RotaryBeaconLight.swift */; };
+		85B8967F232F67B10091EA0D /* RotaryBeaconLight.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85B8967E232F67B10091EA0D /* RotaryBeaconLight.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1920A4A7B4F893C81A5775D6 /* Pods-PachiSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachiSimulator.release.xcconfig"; path = "Target Support Files/Pods-PachiSimulator/Pods-PachiSimulator.release.xcconfig"; sourceTree = "<group>"; };
+		3792EB40979367144C3A295B /* Pods-PachiSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachiSimulator.debug.xcconfig"; path = "Target Support Files/Pods-PachiSimulator/Pods-PachiSimulator.debug.xcconfig"; sourceTree = "<group>"; };
 		8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSetting.swift; sourceTree = "<group>"; };
 		8558C9E3230D86A70012CF63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		858DDE2C232E7DE000EDB73B /* PachiSettingForLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSettingForLabel.swift; sourceTree = "<group>"; };
 		859FE39E230840290059EBFF /* PachiSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PachiSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FE3A1230840290059EBFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859FE3A3230840290059EBFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +37,10 @@
 		859FE3AD2308402B0059EBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859FE3B523084A730059EBFF /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		859FE3B72309163C0059EBFF /* settingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		85B89679232F4B8D0091EA0D /* RotaryBeaconLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaryBeaconLight.swift; sourceTree = "<group>"; };
+		85B8967C232F51E30091EA0D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		85B8967E232F67B10091EA0D /* RotaryBeaconLight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = RotaryBeaconLight.gif; path = ../../../../Downloads/RotaryBeaconLight.gif; sourceTree = "<group>"; };
+		CD8A60BB3EB945834FCAE173 /* Pods_PachiSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PachiSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7D2D22BDBF6AF88AFBA537 /* Pods_PachiSimulator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +60,8 @@
 			children = (
 				859FE3A0230840290059EBFF /* PachiSimulator */,
 				859FE39F230840290059EBFF /* Products */,
+				85B8967B232F51E30091EA0D /* Frameworks */,
+				DDAE4162518ADD6B478859EE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +76,7 @@
 		859FE3A0230840290059EBFF /* PachiSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				85B8967E232F67B10091EA0D /* RotaryBeaconLight.gif */,
 				859FE3B3230849F10059EBFF /* Class */,
 				859FE3A1230840290059EBFF /* AppDelegate.swift */,
 				859FE3A5230840290059EBFF /* Main.storyboard */,
@@ -75,13 +90,33 @@
 		859FE3B3230849F10059EBFF /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				859FE3A3230840290059EBFF /* ViewController.swift */,
-				859FE3B523084A730059EBFF /* historyViewController.swift */,
-				859FE3B72309163C0059EBFF /* settingViewController.swift */,
-				8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */,
 				8558C9E3230D86A70012CF63 /* Constants.swift */,
+				859FE3B523084A730059EBFF /* historyViewController.swift */,
+				8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */,
+				858DDE2C232E7DE000EDB73B /* PachiSettingForLabel.swift */,
+				859FE3B72309163C0059EBFF /* settingViewController.swift */,
+				859FE3A3230840290059EBFF /* ViewController.swift */,
+				85B89679232F4B8D0091EA0D /* RotaryBeaconLight.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		85B8967B232F51E30091EA0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85B8967C232F51E30091EA0D /* AVFoundation.framework */,
+				CD8A60BB3EB945834FCAE173 /* Pods_PachiSimulator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDAE4162518ADD6B478859EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3792EB40979367144C3A295B /* Pods-PachiSimulator.debug.xcconfig */,
+				1920A4A7B4F893C81A5775D6 /* Pods-PachiSimulator.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 859FE3B02308402B0059EBFF /* Build configuration list for PBXNativeTarget "PachiSimulator" */;
 			buildPhases = (
+				326D1FE6C70CF85CF0612B99 /* [CP] Check Pods Manifest.lock */,
 				859FE39A230840290059EBFF /* Sources */,
 				859FE39B230840290059EBFF /* Frameworks */,
 				859FE39C230840290059EBFF /* Resources */,
+				8039788F9066F4331499CD99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,11 +181,59 @@
 			files = (
 				859FE3AC2308402B0059EBFF /* LaunchScreen.storyboard in Resources */,
 				859FE3A92308402B0059EBFF /* Assets.xcassets in Resources */,
+				85B8967F232F67B10091EA0D /* RotaryBeaconLight.gif in Resources */,
 				859FE3A7230840290059EBFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		326D1FE6C70CF85CF0612B99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PachiSimulator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8039788F9066F4331499CD99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PachiSimulator/Pods-PachiSimulator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PachiSimulator/Pods-PachiSimulator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		859FE39A230840290059EBFF /* Sources */ = {
@@ -158,6 +243,8 @@
 				859FE3A4230840290059EBFF /* ViewController.swift in Sources */,
 				859FE3A2230840290059EBFF /* AppDelegate.swift in Sources */,
 				859FE3B623084A730059EBFF /* historyViewController.swift in Sources */,
+				85B8967A232F4B8D0091EA0D /* RotaryBeaconLight.swift in Sources */,
+				858DDE2D232E7DE000EDB73B /* PachiSettingForLabel.swift in Sources */,
 				8558C9E0230C3EFF0012CF63 /* PachiSetting.swift in Sources */,
 				859FE3B82309163C0059EBFF /* settingViewController.swift in Sources */,
 				8558C9E4230D86A70012CF63 /* Constants.swift in Sources */,
@@ -304,6 +391,7 @@
 		};
 		859FE3B12308402B0059EBFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3792EB40979367144C3A295B /* Pods-PachiSimulator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +411,7 @@
 		};
 		859FE3B22308402B0059EBFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1920A4A7B4F893C81A5775D6 /* Pods-PachiSimulator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

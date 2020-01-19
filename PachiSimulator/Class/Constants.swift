@@ -22,4 +22,6 @@ class Constants {
     case lightMiddle256 = 256
     case lightMiddle199 = 199
   }
+  // 確率 [(表記用, 計算用)]
+  let probability:[(spec: String, denominator: Int)] = [("1/319", 319), ("1/256", 256), ("1/199", 199)]
 }
