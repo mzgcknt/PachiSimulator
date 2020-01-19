@@ -9,7 +9,7 @@
 import Foundation
 import SwiftGifOrigin
 
-/// 表示するパトランプを管理するクラス
+/// パトランプ管理クラス
 class RotaryBeaconLight {
   
   init () {

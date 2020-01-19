@@ -8,16 +8,27 @@
 
 import Foundation
 
-/// ラベルに表示用のテキスト文の管理クラス
+/// ラベル表示用テキスト文の管理クラス(今の所イケてないクラス)
 class PachiSettingForLable: PachiSetting {
-  
+  private var probabilityText: String?
+  private var rotationText: String?
   /// 確率表記用のテキスト文
-  var probabilityText: String? {
-    return String(getProbability())
+  var ProbabilityText: String? {
+    get {
+      return String(Probability)
+    }
+    set(Probability) {
+      self.probabilityText = Probability
+    }
   }
   /// 回転率表記用のテキスト文
-  var rotationText: String? {
-    return String(getRotation())
+  var RotationText: String? {
+    get {
+      return String(Rotation)
+    }
+    set(RotationText) {
+      self.probabilityText = rotationText
+    }
   }
   
   override init() {

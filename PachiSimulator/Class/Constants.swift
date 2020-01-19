@@ -8,16 +8,19 @@
 
 import Foundation
 
+/// 定数値管理クラス
 class Constants {
   static let shared = Constants()
   
   private init() {
   }
-  
-  let settingSegue = "toSettingView"
-  let historySegue = "toHistoryView"
-  
-  enum pachiSpec: Int {
+  // 遷移先VC名
+  enum Segue: String {
+    case settingSegue = "toSettingView"
+    case historySegue = "toHistoryView"
+  }
+  // 確率分母
+  enum PachiSpec: Int {
     case middle = 319
     case lightMiddle256 = 256
     case lightMiddle199 = 199

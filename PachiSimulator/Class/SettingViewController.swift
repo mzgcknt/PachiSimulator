@@ -1,5 +1,5 @@
 //
-//  settingViewController.swift
+//  SettingViewController.swift
 //  PachiSimulator
 //
 //  Created by 溝口健太 on 2019/08/18.
@@ -9,7 +9,7 @@
 import UIKit
 
 /// 確率と回転率の設定画面
-class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
   @IBOutlet weak var probabilityLabel: UILabel!
   @IBOutlet weak var rotationRateLabel: UILabel!
@@ -18,16 +18,17 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
   @IBOutlet weak var rotationRatePicker: UIPickerView!
   
   var rotationRate :[Int] = []
-  
-  var pachi:  PachiSetting!
+  // TODO:VCから受け取ったクラスの確率と回転率を再設定するようにする
+  var pachiSetting: PachiSetting!
+  var settingDelegate: PachiSettingDelegate?
   
   override func viewDidLoad() {
-        super.viewDidLoad()
-        probabilityLabel.text = "確率"
-        rotationRateLabel.text = "回転率"
-    
-        setPickerView(pickerView: probabilityPicker, tag: 1)
-        setPickerView(pickerView: rotationRatePicker, tag: 2)
+    super.viewDidLoad()
+    self.probabilityLabel.text = "確率"
+    self.rotationRateLabel.text = "回転率"
+
+    setPickerView(pickerView: probabilityPicker, tag: 1)
+    setPickerView(pickerView: rotationRatePicker, tag: 2)
     }
     
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -44,11 +45,12 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
   
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     // TODO: pickerが選ばれた際に、確率と回転率をsetするような処理をする事
-    // ここはドラムロールだから、画面を遷移する時に値をセットする感じにしよ。
     if pickerView.tag == 1 {
-      self.pachi.setProbability(probability: Constants.shared.probability[row].denominator)
+//      self.pachiSetting.Probability =  Constants.shared.probability[row].denominator
+      self.settingDelegate?.reflectPachiProbability(probability: Constants.shared.probability[row].spec)
     } else {
-      self.pachi.setRotation(rotation: rotationRate[row])
+//      self.pachiSetting.Rotation = rotationRate[row]
+      self.settingDelegate?.reflectPachiRotationRate(rotationRate: String(rotationRate[row]))
     }
   }
   
@@ -59,6 +61,10 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
       return rotationRate.map { String($0) }[row]
     }
   }
+  /// 確率, 回転率のdataPickerの設定
+  /// - Parameters:
+  ///   - pickerView: dataPicker
+  ///   - tag: dataPickerのタグ
   func setPickerView(pickerView: UIPickerView, tag: Int) {
     pickerView.delegate = self
     pickerView.dataSource = self
@@ -67,7 +73,10 @@ class settingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
       setRotationRateArray(begin: 10, end: 30)
     }
   }
-  
+  /// dataPickerへ回転率を反映
+  /// - Parameters:
+  ///   - begin: 最低
+  ///   - end: 最高
   func setRotationRateArray(begin: Int, end: Int) {
     for index in begin ... end {
       self.rotationRate.append(index)

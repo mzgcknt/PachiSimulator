@@ -1,5 +1,5 @@
 //
-//  historyViewController.swift
+//  HistoryViewController.swift
 //  PachiSimulator
 //
 //  Created by 溝口健太 on 2019/08/17.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class historyViewController: UIViewController {
+/// 当選履歴の管理画面
+class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

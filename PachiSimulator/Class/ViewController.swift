@@ -9,18 +9,17 @@
 import UIKit
 import SwiftGifOrigin
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PachiSettingDelegate {
   
   @IBOutlet weak var navigationBar: UINavigationItem!
   @IBOutlet weak var RotaryBeaconLightView: UIImageView!
   @IBOutlet weak var probabilityLabel: UILabel!
   @IBOutlet weak var rotationLabel: UILabel!
   
-  var pachi = PachiSettingForLable ()
+  private var pachiSetting = PachiSettingForLable()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
 //    RotaryBeaconLightView.loadGif(name: "RotaryBeaconLightView")
 //    do {
 //      let imageData = try Data(contentsOf: Bundle.main.url(forResource: "RotaryBeaconLight", withExtension: "gif")!)
@@ -28,20 +27,27 @@ class ViewController: UIViewController {
 //    } catch {
 //      print(error)
 //    }
-    self.RotaryBeaconLightView.image = RotaryBeaconLight().getGifImage()
-
+    // TODO:gifの読み込みが遅いので、メインスレッドでやらないようにした方が良いかも
+//    self.RotaryBeaconLightView.image = RotaryBeaconLight().getGifImage()
+    self.probabilityLabel.text = pachiSetting.ProbabilityText
+    self.rotationLabel.text = pachiSetting.RotationText
+    
   }
-  /// 確率および回転率を変更した際にラベルへ反映させる用に呼び出す
-  override func viewWillAppear(_ animated: Bool) {
-    probabilityLabel.text = pachi.probabilityText
-    rotationLabel.text = pachi.rotationText
+  /// 設定画面の確率を反映させる
+  /// - Parameter probability: 確率
+  func reflectPachiProbability(probability: String?) {
+    self.probabilityLabel.text = probability
   }
-  
-  
+  /// 設定画面の回転率を反映させる
+  /// - Parameter rotationRate: 回転率
+  func reflectPachiRotationRate(rotationRate: String?) {
+    self.rotationLabel.text = rotationRate
+  }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == Constants.shared.settingSegue {
-      let nc = segue.destination as! settingViewController
-       nc.pachi = self.pachi
+    if let identifier = segue.identifier, identifier == Constants.Segue.settingSegue.rawValue {
+      let settingViewController = segue.destination as! SettingViewController
+       settingViewController.pachiSetting = self.pachiSetting
+       settingViewController.settingDelegate = self
     }
   }
 }
