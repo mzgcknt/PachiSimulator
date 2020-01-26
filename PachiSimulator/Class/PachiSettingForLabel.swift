@@ -35,7 +35,7 @@ class PachiSettingForLable: PachiSetting {
   }
   
   init() {
-    self.spec = Constants.shared.pachiSpec[0]
+    self.spec = Constants.shared.pachiSpec[0].spec
     super.init(rotation: self.defaultRotation, selectRotation: self.defaultSelectRotation)
   }
 }

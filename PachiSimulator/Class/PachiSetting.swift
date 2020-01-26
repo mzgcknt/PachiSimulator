@@ -21,7 +21,7 @@ class PachiSetting {
     self.probability = Constants.ProbabilityDenominator.middle.rawValue
     self.rotation = rotation
     self.selectProbabilityPicker = 0
-    self.selectRotationPicker =  selectRotation
+    self.selectRotationPicker = selectRotation
   }
   /// 確率の設定
   ///

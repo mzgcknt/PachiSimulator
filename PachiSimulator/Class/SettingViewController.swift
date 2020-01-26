@@ -51,12 +51,12 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
       self.settingDelegate?.reflectPachiProbability(probability: Constants.shared.pachiSpec[row])
     } else {
       self.pachiSetting.SelectRotation = row
-      self.settingDelegate?.reflectPachiRotationRate(rotationRate: String(rotationRate[row]))
+      self.settingDelegate?.reflectPachiRotationRate(rotationRate: rotationRate[row])
     }
   }
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     if self.isProbabilityPicker(tag: pickerView.tag) {
-      return Constants.shared.pachiSpec[row]
+      return Constants.shared.pachiSpec[row].spec
     } else {
       return rotationRate.map { String($0) }[row]
     }

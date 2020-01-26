@@ -26,5 +26,5 @@ class Constants {
     case lightMiddle199 = 199
   }
   // パチンコの確率
-  let pachiSpec = ["1/319", "1/256", "1/199"]
+  let pachiSpec: [(spec: String, denominator: Int)] = [("1/319", 319), ("1/256", 256), ("1/199", 199)]
 }

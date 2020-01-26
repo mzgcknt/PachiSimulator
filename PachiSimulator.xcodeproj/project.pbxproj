@@ -11,6 +11,8 @@
 		851508FF23D4514000EC249D /* PachiSettingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851508FE23D4514000EC249D /* PachiSettingDelegate.swift */; };
 		8558C9E0230C3EFF0012CF63 /* PachiSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */; };
 		8558C9E4230D86A70012CF63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9E3230D86A70012CF63 /* Constants.swift */; };
+		8561E45B23DD581400985FB7 /* PachiSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561E45A23DD581400985FB7 /* PachiSimulator.swift */; };
+		8561E45D23DD735D00985FB7 /* InvestmentMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561E45C23DD735D00985FB7 /* InvestmentMoney.swift */; };
 		858DDE2D232E7DE000EDB73B /* PachiSettingForLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858DDE2C232E7DE000EDB73B /* PachiSettingForLabel.swift */; };
 		859FE3A2230840290059EBFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3A1230840290059EBFF /* AppDelegate.swift */; };
 		859FE3A4230840290059EBFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FE3A3230840290059EBFF /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 		851508FE23D4514000EC249D /* PachiSettingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSettingDelegate.swift; sourceTree = "<group>"; };
 		8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSetting.swift; sourceTree = "<group>"; };
 		8558C9E3230D86A70012CF63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8561E45A23DD581400985FB7 /* PachiSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSimulator.swift; sourceTree = "<group>"; };
+		8561E45C23DD735D00985FB7 /* InvestmentMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentMoney.swift; sourceTree = "<group>"; };
 		858DDE2C232E7DE000EDB73B /* PachiSettingForLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSettingForLabel.swift; sourceTree = "<group>"; };
 		859FE39E230840290059EBFF /* PachiSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PachiSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FE3A1230840290059EBFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,9 +98,11 @@
 			children = (
 				8558C9E3230D86A70012CF63 /* Constants.swift */,
 				859FE3B523084A730059EBFF /* HistoryViewController.swift */,
+				8561E45C23DD735D00985FB7 /* InvestmentMoney.swift */,
 				8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */,
 				851508FE23D4514000EC249D /* PachiSettingDelegate.swift */,
 				858DDE2C232E7DE000EDB73B /* PachiSettingForLabel.swift */,
+				8561E45A23DD581400985FB7 /* PachiSimulator.swift */,
 				85B89679232F4B8D0091EA0D /* RotaryBeaconLight.swift */,
 				859FE3B72309163C0059EBFF /* SettingViewController.swift */,
 				859FE3A3230840290059EBFF /* ViewController.swift */,
@@ -245,6 +251,8 @@
 			files = (
 				859FE3A4230840290059EBFF /* ViewController.swift in Sources */,
 				851508FF23D4514000EC249D /* PachiSettingDelegate.swift in Sources */,
+				8561E45D23DD735D00985FB7 /* InvestmentMoney.swift in Sources */,
+				8561E45B23DD581400985FB7 /* PachiSimulator.swift in Sources */,
 				859FE3A2230840290059EBFF /* AppDelegate.swift in Sources */,
 				859FE3B623084A730059EBFF /* HistoryViewController.swift in Sources */,
 				85B8967A232F4B8D0091EA0D /* RotaryBeaconLight.swift in Sources */,
