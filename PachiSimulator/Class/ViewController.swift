@@ -17,6 +17,8 @@ class ViewController: UIViewController, PachiSettingDelegate {
   @IBOutlet weak var rotationLabel: UILabel!
   
   private var pachiSetting = PachiSettingForLable()
+  // 初回起動時のデフォルト回転数
+  private var tryCount = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,19 +31,19 @@ class ViewController: UIViewController, PachiSettingDelegate {
 //    }
     // TODO:gifの読み込みが遅いので、メインスレッドでやらないようにした方が良いかも
 //    self.RotaryBeaconLightView.image = RotaryBeaconLight().getGifImage()
-    self.probabilityLabel.text = pachiSetting.ProbabilityText
+    self.navigationBar.title = pachiSetting.Spec
     self.rotationLabel.text = pachiSetting.RotationText
     
   }
   /// 設定画面の確率を反映させる
   /// - Parameter probability: 確率
-  func reflectPachiProbability(probability: String?) {
-    self.probabilityLabel.text = probability
+  func reflectPachiProbability(probability: String) {
+    self.navigationBar.title = probability
   }
   /// 設定画面の回転率を反映させる
   /// - Parameter rotationRate: 回転率
-  func reflectPachiRotationRate(rotationRate: String?) {
-    self.rotationLabel.text = rotationRate
+  func reflectPachiRotationRate(rotationRate: String) {
+    self.rotationLabel.text = "回転率 \(rotationRate)"
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let identifier = segue.identifier, identifier == Constants.Segue.settingSegue.rawValue {
@@ -50,5 +52,11 @@ class ViewController: UIViewController, PachiSettingDelegate {
        settingViewController.settingDelegate = self
     }
   }
+  
+  /// 試行回数
+  /// - Parameter sender: ボタン
+  @IBAction func trial(_ sender: Any) {
+    self.tryCount += 1
+    self.probabilityLabel.text = "\(self.tryCount)回転"
+  }
 }
-

@@ -12,14 +12,17 @@ import Foundation
 class PachiSetting {
   private var probability: Int
   private var rotation: Int
-  private let defaultRotation = 20
+  
+  private var selectProbabilityPicker: Int
+  private var selectRotationPicker: Int
   
   /// 初回起動時のデフォルト設定
-  init() {
-    self.probability = Constants.PachiSpec.middle.rawValue
-    self.rotation = self.defaultRotation
+  init(rotation: Int, selectRotation: Int) {
+    self.probability = Constants.ProbabilityDenominator.middle.rawValue
+    self.rotation = rotation
+    self.selectProbabilityPicker = 0
+    self.selectRotationPicker =  selectRotation
   }
-  
   /// 確率の設定
   ///
   /// - Returns: 確率
@@ -40,6 +43,24 @@ class PachiSetting {
     }
     set(rotation) {
       self.rotation = rotation
+    }
+  }
+  /// 選択中の確率
+  var SelectProbability: Int {
+    get {
+      return self.selectProbabilityPicker
+    }
+    set(selectProbability) {
+      self.selectProbabilityPicker = selectProbability
+    }
+  }
+  /// 選択中の回転率
+  var SelectRotation: Int {
+    get {
+      return self.selectRotationPicker
+    }
+    set(selectRotation) {
+      self.selectRotationPicker = selectRotation
     }
   }
 }

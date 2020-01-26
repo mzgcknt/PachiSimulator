@@ -10,30 +10,32 @@ import Foundation
 
 /// ラベル表示用テキスト文の管理クラス(今の所イケてないクラス)
 class PachiSettingForLable: PachiSetting {
-  private var probabilityText: String?
+  private var spec: String
   private var rotationText: String?
-  /// 確率表記用のテキスト文
-  var ProbabilityText: String? {
+  private let defaultRotation = 20
+  // 回転率が20スタートのため、要素は10番目になる
+  private let defaultSelectRotation = 10
+  /// パチンコのスペック
+  var Spec: String {
     get {
-      return String(Probability)
+      return self.spec
     }
-    set(Probability) {
-      self.probabilityText = Probability
+    set(spec) {
+      self.spec = spec
     }
   }
   /// 回転率表記用のテキスト文
   var RotationText: String? {
     get {
-      return String(Rotation)
+      return String(super.Rotation)
     }
     set(RotationText) {
-      self.probabilityText = rotationText
+      self.rotationText = RotationText
     }
   }
   
-  override init() {
-    super.init()
+  init() {
+    self.spec = Constants.shared.pachiSpec[0]
+    super.init(rotation: self.defaultRotation, selectRotation: self.defaultSelectRotation)
   }
-  
-  
 }

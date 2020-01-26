@@ -10,6 +10,6 @@ import Foundation
 
 /// 選択した設定内容を反映させるdelegate
 protocol PachiSettingDelegate: class {
-  func reflectPachiProbability(probability: String?)
-  func reflectPachiRotationRate(rotationRate: String?)
+  func reflectPachiProbability(probability: String)
+  func reflectPachiRotationRate(rotationRate: String)
 }

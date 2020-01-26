@@ -20,11 +20,11 @@ class Constants {
     case historySegue = "toHistoryView"
   }
   // 確率分母
-  enum PachiSpec: Int {
+  enum ProbabilityDenominator: Int {
     case middle = 319
     case lightMiddle256 = 256
     case lightMiddle199 = 199
   }
-  // 確率 [(表記用, 計算用)]
-  let probability:[(spec: String, denominator: Int)] = [("1/319", 319), ("1/256", 256), ("1/199", 199)]
+  // パチンコの確率
+  let pachiSpec = ["1/319", "1/256", "1/199"]
 }
