@@ -81,10 +81,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RotaryBeaconLight.gif" translatesAutoresizingMaskIntoConstraints="NO" id="fQg-5M-a5C">
                                 <rect key="frame" x="16" y="82" width="288" height="170.5"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wab-oI-ubo">
-                                <rect key="frame" x="60" y="462.5" width="200" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wab-oI-ubo">
+                                <rect key="frame" x="80" y="476" width="160" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="IIF-8b-C3H"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="pushButton"/>
                                 <connections>
                                     <action selector="trial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amH-FL-wkl"/>
                                 </connections>
@@ -112,30 +114,26 @@
                                     <constraint firstItem="P4R-PC-9N1" firstAttribute="width" secondItem="84u-vj-APH" secondAttribute="width" id="y2u-PY-wZT"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-9c-mAB">
-                                <rect key="frame" x="60" y="392.5" width="200" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izl-5v-9vS" customClass="InvestmentMoneyView" customModule="PachiSimulator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="376" width="280" height="92.5"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Izl-5v-9vS" secondAttribute="trailing" constant="20" id="1Ll-px-gXS"/>
                             <constraint firstItem="aL3-NP-SPK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="3Ji-yJ-gsl"/>
                             <constraint firstItem="aL3-NP-SPK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="3hJ-Hu-4ua"/>
                             <constraint firstItem="fQg-5M-a5C" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="GbQ-R4-CTa"/>
-                            <constraint firstItem="wab-oI-ubo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="HKu-Wr-ojx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wab-oI-ubo" secondAttribute="trailing" constant="60" id="ICn-XW-IjI"/>
-                            <constraint firstItem="HHe-9c-mAB" firstAttribute="top" secondItem="aL3-NP-SPK" secondAttribute="bottom" constant="40" id="LE1-CZ-f24"/>
+                            <constraint firstItem="wab-oI-ubo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="HKu-Wr-ojx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wab-oI-ubo" secondAttribute="trailing" constant="80" id="ICn-XW-IjI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wab-oI-ubo" secondAttribute="bottom" constant="21" id="Ikf-RN-9gI"/>
+                            <constraint firstItem="Izl-5v-9vS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XSZ-br-pEM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fQg-5M-a5C" secondAttribute="trailing" constant="16" id="Xsf-ew-0fA"/>
                             <constraint firstItem="aL3-NP-SPK" firstAttribute="top" secondItem="fQg-5M-a5C" secondAttribute="bottom" constant="50" id="aR6-ax-kAD"/>
                             <constraint firstItem="fQg-5M-a5C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="b0E-JG-eTN"/>
-                            <constraint firstItem="HHe-9c-mAB" firstAttribute="height" secondItem="84u-vj-APH" secondAttribute="height" id="nxq-ny-uQm"/>
                             <constraint firstItem="fQg-5M-a5C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="osg-4h-ubt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HHe-9c-mAB" secondAttribute="trailing" constant="60" id="ozc-PZ-UXW"/>
-                            <constraint firstItem="HHe-9c-mAB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="pgM-lo-KWL"/>
-                            <constraint firstItem="wab-oI-ubo" firstAttribute="top" secondItem="HHe-9c-mAB" secondAttribute="bottom" constant="20" id="ttX-K5-dHk"/>
-                            <constraint firstItem="wab-oI-ubo" firstAttribute="height" secondItem="84u-vj-APH" secondAttribute="height" id="wwh-SA-Bql"/>
+                            <constraint firstItem="Izl-5v-9vS" firstAttribute="top" secondItem="aL3-NP-SPK" secondAttribute="bottom" constant="23.5" id="u5C-EO-aPI"/>
+                            <constraint firstItem="wab-oI-ubo" firstAttribute="top" secondItem="Izl-5v-9vS" secondAttribute="bottom" constant="7.5" id="vYr-21-nW3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -153,7 +151,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="RotaryBeaconLightView" destination="fQg-5M-a5C" id="jjA-CX-ZpA"/>
-                        <outlet property="investmentLabel" destination="HHe-9c-mAB" id="BL1-fO-VIM"/>
+                        <outlet property="investmentView" destination="Izl-5v-9vS" id="9dG-Uu-AWd"/>
                         <outlet property="navigationBar" destination="7ls-pR-RDr" id="CHP-se-U78"/>
                         <outlet property="probabilityLabel" destination="84u-vj-APH" id="URF-Wf-FjN"/>
                         <outlet property="rotationLabel" destination="P4R-PC-9N1" id="aaK-9I-9kt"/>
@@ -234,6 +232,7 @@
     <resources>
         <image name="RotaryBeaconLight.gif" width="1280" height="720"/>
         <image name="history" width="24" height="24"/>
+        <image name="pushButton" width="600" height="405"/>
         <image name="setting" width="24" height="24"/>
     </resources>
 </document>

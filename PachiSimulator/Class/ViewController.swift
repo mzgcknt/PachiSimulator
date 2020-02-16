@@ -15,10 +15,10 @@ class ViewController: UIViewController, PachiSettingDelegate {
   @IBOutlet weak var RotaryBeaconLightView: UIImageView!
   @IBOutlet weak var probabilityLabel: UILabel!
   @IBOutlet weak var rotationLabel: UILabel!
-  @IBOutlet weak var investmentLabel: UILabel!
+  @IBOutlet weak var investmentView: InvestmentMoneyView!
   
   private var pachiSetting = PachiSettingForLable()
-  // 初回起動時の試行回数 TODO:クラス化の検討
+  // 初回起動時の試行回数 TODO:クラス化の検討でロジックの分離をする
   private var tryCount = 0
   
   private var simulator: PachiSimulator!
@@ -40,7 +40,6 @@ class ViewController: UIViewController, PachiSettingDelegate {
     
     self.navigationBar.title = pachiSetting.Spec
     self.rotationLabel.text = "回転率 \(pachiSetting.RotationText!)"
-    self.investmentLabel.text = "\(self.investmentMoney.InvestmentMoney) 円投資"
   }
   /// 設定画面の確率を反映させる
   /// - Parameter probability: 確率
@@ -82,7 +81,7 @@ class ViewController: UIViewController, PachiSettingDelegate {
   /// 投資金額のクリア処理
   private func clearInvestmentLabel() {
     self.investmentMoney.clear()
-    self.investmentLabel.text = "\(self.investmentMoney.InvestmentMoney) 円投資"
+    self.investmentView.clearCountLabel()
   }
   /// 試行回数
   /// - Parameter sender: ボタン
@@ -94,6 +93,6 @@ class ViewController: UIViewController, PachiSettingDelegate {
     }
     self.investmentMoney.addInvestment(tryCount: self.tryCount)
     self.probabilityLabel.text = "\(self.tryCount)回転"
-    self.investmentLabel.text = "\(self.investmentMoney.InvestmentMoney) 円投資"
+    // TODO: 諭吉と野口のラベルの更新
   }
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B7D2D22BDBF6AF88AFBA537 /* Pods_PachiSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8A60BB3EB945834FCAE173 /* Pods_PachiSimulator.framework */; };
 		851508FF23D4514000EC249D /* PachiSettingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851508FE23D4514000EC249D /* PachiSettingDelegate.swift */; };
+		853BE1FD23DEFE8200AC5E74 /* InvestmentMoneyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853BE1FC23DEFE8200AC5E74 /* InvestmentMoneyView.xib */; };
+		853BE1FF23DF000D00AC5E74 /* InvestmentMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853BE1FE23DF000D00AC5E74 /* InvestmentMoneyView.swift */; };
 		8558C9E0230C3EFF0012CF63 /* PachiSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */; };
 		8558C9E4230D86A70012CF63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558C9E3230D86A70012CF63 /* Constants.swift */; };
 		8561E45B23DD581400985FB7 /* PachiSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561E45A23DD581400985FB7 /* PachiSimulator.swift */; };
@@ -29,6 +31,8 @@
 		1920A4A7B4F893C81A5775D6 /* Pods-PachiSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachiSimulator.release.xcconfig"; path = "Target Support Files/Pods-PachiSimulator/Pods-PachiSimulator.release.xcconfig"; sourceTree = "<group>"; };
 		3792EB40979367144C3A295B /* Pods-PachiSimulator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PachiSimulator.debug.xcconfig"; path = "Target Support Files/Pods-PachiSimulator/Pods-PachiSimulator.debug.xcconfig"; sourceTree = "<group>"; };
 		851508FE23D4514000EC249D /* PachiSettingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSettingDelegate.swift; sourceTree = "<group>"; };
+		853BE1FC23DEFE8200AC5E74 /* InvestmentMoneyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InvestmentMoneyView.xib; path = PachiSimulator/InvestmentMoneyView.xib; sourceTree = SOURCE_ROOT; };
+		853BE1FE23DF000D00AC5E74 /* InvestmentMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentMoneyView.swift; sourceTree = "<group>"; };
 		8558C9DF230C3EFF0012CF63 /* PachiSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSetting.swift; sourceTree = "<group>"; };
 		8558C9E3230D86A70012CF63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8561E45A23DD581400985FB7 /* PachiSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PachiSimulator.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 		859FE3B3230849F10059EBFF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				853BE1FC23DEFE8200AC5E74 /* InvestmentMoneyView.xib */,
+				853BE1FE23DF000D00AC5E74 /* InvestmentMoneyView.swift */,
 				8558C9E3230D86A70012CF63 /* Constants.swift */,
 				859FE3B523084A730059EBFF /* HistoryViewController.swift */,
 				8561E45C23DD735D00985FB7 /* InvestmentMoney.swift */,
@@ -192,6 +198,7 @@
 				859FE3A92308402B0059EBFF /* Assets.xcassets in Resources */,
 				85B8967F232F67B10091EA0D /* RotaryBeaconLight.gif in Resources */,
 				859FE3A7230840290059EBFF /* Main.storyboard in Resources */,
+				853BE1FD23DEFE8200AC5E74 /* InvestmentMoneyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +260,7 @@
 				851508FF23D4514000EC249D /* PachiSettingDelegate.swift in Sources */,
 				8561E45D23DD735D00985FB7 /* InvestmentMoney.swift in Sources */,
 				8561E45B23DD581400985FB7 /* PachiSimulator.swift in Sources */,
+				853BE1FF23DF000D00AC5E74 /* InvestmentMoneyView.swift in Sources */,
 				859FE3A2230840290059EBFF /* AppDelegate.swift in Sources */,
 				859FE3B623084A730059EBFF /* HistoryViewController.swift in Sources */,
 				85B8967A232F4B8D0091EA0D /* RotaryBeaconLight.swift in Sources */,
